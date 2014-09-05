@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PlannerApp</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSto8urXWvph8qrktmmG-ElmST-YPkcdFwmCFKc5mczMEnUZYYP"></a>
+  <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+ <% flash.each do |name, msg| %>
+     <div class="flash-message flash-message-<%= name %>">
+       <%= msg %>
+     </div>
+   <% end %>
+
+  <% if current_user %>
+      <p>hello <%= current_user.e_mail %></p>
+ 
+   
+  <p>
+    <button type="button">  <%= link_to 'log me out!', logout_path %></button>
+    </p>
+ <% else %>
+ <div class='loginaction'>
+ <button type="button"><%= link_to 'log me in!', login_path %></button>
+ <button type="button"><%= link_to 'log me out!', logout_path %></button>
+ </div>
+
+
+   <% end %>
+  
+  <div class='useraction'>
+  <nav>
+    <ul>
+      <li><%=link_to 'course', courses_path %></li>
+      <li> <%=link_to 'user', users_path %></li>
+      <li> <%=link_to 'classroom', classrooms_path %></li>
+    </ul>
+  </nav>
+  </div>
+<%= yield %>
+
+</body>
+</html>

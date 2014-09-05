@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  occupancy: MyString
+
+two:
+  name: MyString
+  occupancy: MyString

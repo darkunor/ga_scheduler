@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  begin_date: 1
+  end_date: 1
+  begin_time: 1
+  end_time: 1
+  quantity_of_students: 1
+  classroom_id: 1
+  tuition: 1
+
+two:
+  name: MyString
+  description: MyString
+  begin_date: 1
+  end_date: 1
+  begin_time: 1
+  end_time: 1
+  quantity_of_students: 1
+  classroom_id: 1
+  tuition: 1

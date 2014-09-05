@@ -1,0 +1,43 @@
+<h1>Courses</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Begin date</th>
+    <th>End date</th>
+    <th>Morning</th>
+    <th>Afternoon</th>
+    <th>Evening</th>
+    <th>Quantity of students</th>
+    <th>Classroom</th>
+    <th>Tuition</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% if @courses %>
+<% @courses.each do |course| %>
+  <tr>
+    <td><%= course.name %></td>
+    <td><%= course.description %></td>
+    <td><%= course.begin_date %></td>
+    <td><%= course.end_date %></td>
+    <td><%= course.morning %></td>
+    <td><%= course.afternoon %></td>
+    <td><%= course.evening %></td>
+    <td><%= course.quantity_of_students %></td>
+    <td><%= course.classroom_id %></td>
+    <td><%= number_to_currency(course.tuition) %></td>
+    <td><%= link_to 'Show', course %></td>
+    <td><%= link_to 'Edit', edit_course_path(course) %></td>
+    <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+
+<br />
+
+<button type="button"><%= link_to 'New Course', new_course_path %></button>
+<br>
+<br>

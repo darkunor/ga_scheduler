@@ -1,0 +1,49 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+table, th, td {
+  border: 1px solid black;
+}
+
+body {
+background-color: beige;
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSto8urXWvph8qrktmmG-ElmST-YPkcdFwmCFKc5mczMEnUZYYP");
+background-repeat: no-repeat;
+background-position: right top;
+}
+
+h1 {
+    text-shadow: 5px 5px 6px #FF0000;
+    color: purple;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 50px;
+    } 
+
+.useraction a {
+text-decoration: none;
+font-family: 'Gloria Hallelujah', cursive;
+font-size: 25px;
+}
+
+.useraction a , li {
+  list-style-type: square;
+}
+
+
+.loginaction a {
+  text-decoration: none
+
+}
+
